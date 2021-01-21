@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>inicio</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <!-- <ion-item routerLink="/alertas" detail>
+            <ion-label>ALETAS</ion-label>
+        </ion-item>
+        <ion-item routerLink="/action-sheet" detail>
+            <ion-label>ACTION-SHEET</ion-label>
+        </ion-item> -->
+        <ion-item *ngFor="let elemento of lista" [routerLink]="elemento.redirecTo" detail>
+            <ion-icon slot="start" [name]="elemento.icon"></ion-icon>
+            <ion-label>{{elemento.name}}</ion-label>
+        </ion-item>
+    </ion-list>
+
+    <ion-list>
+        <ion-label>Uso de Servicoos por Json</ion-label>
+        <ion-list>
+            <ion-item *ngFor="let etq of menu | async" [routerLink]="etq.redirecTo" detail>
+                <ion-icon slot="start" [name]="etq.icon"></ion-icon>
+                <ion-label>{{etq.name}}</ion-label>
+            </ion-item>
+
+        </ion-list>
+    </ion-list>
+</ion-content>

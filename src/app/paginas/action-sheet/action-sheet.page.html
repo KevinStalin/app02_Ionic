@@ -1,0 +1,74 @@
+<app-header titulo="Action-sheet"></app-header>
+<!-- <ion-header>
+    <ion-buttons>
+        <ion-back-button defaultHref="/" text="Home">
+        </ion-back-button>
+    </ion-buttons>
+
+    <ion-toolbar>
+        <ion-title>actionSheet</ion-title>
+    </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+
+    <ion-button expand="full" color="primary" (click)="presentActionSheet()">
+        Ejecutar Action
+    </ion-button>
+    <ion-list>
+        <ion-item *ngFor="let files of carpeta" (click)="presentActionSheet()">
+            <ion-icon slot="end" [name]="files.icon"></ion-icon>
+            <ion-label>{{files.name}}</ion-label>
+        </ion-item>
+        <!-- <ion-item (click)="presentActionSheet()">
+            <ion-label>Carpeta de ejercicios</ion-label>
+        </ion-item>
+        <ion-item (click)="presentActionSheet()">
+            <ion-label>Carpeta fotos</ion-label>
+        </ion-item> -->
+
+    </ion-list>
+
+    <ion-card>
+        <ion-card-header>
+            <!-- <ion-title>UNIVERSIDAD</ion-title> -->
+            <img src="/assets/logoups.jpeg">
+        </ion-card-header>
+        <ion-card-content>
+            <ion-list>
+                <ion-item *ngFor="let car of carrera" (click)="opcionesSeleccionadas(car)">
+                    <ion-label>{{car.name}}</ion-label>
+                    <ion-checkbox color="secondary"></ion-checkbox>
+                </ion-item>
+            </ion-list>
+        </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+        <ion-card-header>
+            <ion-card-subtitle>
+                Ingrese datos personales
+            </ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+            <ion-list>
+                <ion-item>
+                    <ion-label position="floating">Nombres</ion-label>
+                    <ion-input type="text" name="txtnombre" text-right id="input" [(ngModel)]="inputValue1"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label position="floating">Edad</ion-label>
+                    <ion-input type="number" name="txtedad" min="16" max="60" [(ngModel)]="inputValue2"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-button expand="full" (click)="datos_registro()">Enviar</ion-button> -->
+                    <!-- Consultar como mandar los parametros de input al metodo click -->
+                    <!-- capturar los datos de nombre y edad-->
+                </ion-item>
+            </ion-list>
+        </ion-card-content>
+    </ion-card>
+
+
+</ion-content>

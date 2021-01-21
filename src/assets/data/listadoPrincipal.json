@@ -1,0 +1,26 @@
+[{
+        "name": "Alestas",
+        "redirecTo": "/alertas",
+        "icon": "beer-outline"
+    },
+    {
+        "name": "Action-Sheet",
+        "redirecTo": "/action-sheet",
+        "icon": "boat-outline"
+    },
+    {
+        "name": "Tarjetas",
+        "redirecTo": "/tarjetas",
+        "icon": "bug-outline"
+    },
+    {
+        "name": "Clientes",
+        "redirecTo": "/clientes",
+        "icon": "people-outline"
+    },
+    {
+        "name": "Recursos",
+        "redirecTo": "/recursos",
+        "icon": ""
+    }
+]
